@@ -1,0 +1,11 @@
+@import "../../../../assets/styles/sass/styles.scss";
+
+.pageNotFound {
+  flex-direction: column;
+  height: 100%;
+}
+
+button {
+  background: $primary-color;
+  color: $text-white;
+}
