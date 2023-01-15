@@ -14,14 +14,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   
  # Project 
  
- 1) Search page ( to search github user / repositories by username ).
- 
-  ![image](https://user-images.githubusercontent.com/31372157/151691922-8755d1c6-1f5f-4ca8-aca1-d00266cf82ce.png)
 
- 2) User Repositories Lisiting page ( containing user details and repositories details )
- 
- ![image](https://user-images.githubusercontent.com/31372157/151691990-481d9b1f-f0a7-47dc-ab51-d600492cdb99.png)
- ![image](https://user-images.githubusercontent.com/31372157/151691979-3d28af40-d2e0-4fdc-b5b2-73c2a1cfce66.png)
+https://user-images.githubusercontent.com/85154840/212533038-d6c91969-2b9f-4964-b97e-5d0b18b22e19.mp4
+
+
 
 
 # Features
