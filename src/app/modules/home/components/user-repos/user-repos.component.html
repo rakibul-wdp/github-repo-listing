@@ -1,0 +1,60 @@
+<div class="user-repos" *ngIf="userRepoList && userRepoList?.length">
+  <div
+    fxLayout="row wrap"
+    fxLayout.lt-md="column"
+    fxLayoutGap="32px"
+    fxLayoutAlign="flex-start"
+  >
+    <ng-container
+      *ngFor="
+        let repo of userRepoList
+          | paginate
+            : {
+                itemsPerPage: itemsPerPage,
+                currentPage: activePage,
+                totalItems: totalItems
+              }
+      "
+    >
+      <mat-card fxFlex="0 1 calc(50% - 32px)" fxFlex.lt-md="100%">
+        <mat-card-title
+          >{{ repo.name.replaceAll("-", " ") | titlecase }}
+          <i
+            class="material-icons"
+            *ngIf="repo.visibility == 'public'; else privateRepo"
+            >visibility</i
+          >
+          <ng-template #privateRepo>
+            <i class="material-icons">visibility_off</i>
+          </ng-template>
+        </mat-card-title>
+
+        <mat-card-content>
+          <p class="title">
+            {{ repo.description ? repo.description : repo.html_url }}
+          </p>
+
+          <div
+            fxLayout="row wrap"
+            fxLayoutGap="10px"
+            class="mt-20"
+            *ngIf="repo.topics?.length"
+          >
+            <div *ngFor="let topic of repo.topics.slice(0, 4)">
+              <button mat-flat-button color="primary">
+                {{ topic | truncateTitle: 15 }}
+              </button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+
+  <!-- Pagination -->
+  <pagination-controls
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    (pageChange)="getPage((activePage = $event))"
+  ></pagination-controls>
+</div>

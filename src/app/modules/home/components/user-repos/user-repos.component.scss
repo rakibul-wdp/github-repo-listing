@@ -1,0 +1,26 @@
+@import "../../../../../assets/styles/sass/styles.scss";
+
+.user-repos {
+  mat-card {
+    margin-bottom: 20px;
+    border: 2px solid $primary-color;
+
+    mat-card-title {
+      color: $secondary-color;
+      line-height: 26px;
+    }
+
+    mat-card-subtitle {
+      margin-top: 10px;
+    }
+
+    .title {
+      margin-top: 10px;
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    margin-bottom: 10px;
+  }
+}
