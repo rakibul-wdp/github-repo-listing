@@ -1,0 +1,13 @@
+@import "../../../../../assets/styles/sass/styles.scss";
+
+.user-profile {
+  padding: 10px;
+
+  &-details {
+    max-width: 70%;
+
+    @include mq(959px) {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<div class="user-profile" *ngIf="userDetails">
+  <div
+    fxLayout="row"
+    fxLayoutGap="30px grid"
+    fxLayoutAlign="start"
+    fxLayout.lt-md="column"
+    fxLayoutGap.lt-md="0px grid"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutGap="16px grid"
+      fxLayoutAlign.lt-md="center center"
+    >
+      <ngx-avatar
+        [name]="userDetails?.name"
+        [src]="userDetails?.avatar_url"
+        size="200"
+        [round]="true"
+      >
+      </ngx-avatar>
+
+      <p
+        fxLayout="row"
+        fxLayoutGap="5px grid"
+        fxLayoutAlign="start center"
+        *ngIf="userDetails?.html_url"
+      >
+        <i class="material-icons">link</i> {{ userDetails?.html_url }}
+      </p>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxLayoutGap="16px grid"
+      fxLayoutAlign.lt-md="center center"
+      class="user-profile-details"
+    >
+      <h1 class="mt-10">{{ userDetails?.name }}</h1>
+
+      <p class="text-center">{{ userDetails?.bio }}</p>
+
+      <p
+        fxLayout="row"
+        fxLayoutGap="5px grid"
+        fxLayoutAlign="start center"
+        *ngIf="userDetails?.location"
+      >
+        <i class="material-icons">location_on</i> {{ userDetails?.location }}
+      </p>
+
+      <p *ngIf="userDetails?.twitter_username">
+        Twitter: {{ userDetails?.twitter_username }}
+      </p>
+    </div>
+  </div>
+</div>
