@@ -1,0 +1,20 @@
+@import "../../../assets/styles/sass/styles.scss";
+
+.header {
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .toolbar {
+    background: $text-white;
+    border-bottom: 3px solid $primary-color;
+
+    @media only screen and (max-width: 480px) {
+      height: 70px;
+    }
+
+    .title {
+      color: $secondary-color;
+    }
+  }
+}
