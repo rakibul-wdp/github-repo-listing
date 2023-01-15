@@ -1,0 +1,45 @@
+@import "../../../../../assets/styles/sass/styles.scss";
+
+.search-username {
+  &-wrapper {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-radius: 5px;
+  }
+
+  .searchTerm {
+    width: 100%;
+    border: 3px solid $primary-color;
+    border-right: none;
+    padding: 5px;
+    height: 34px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: $color-light-green;
+  }
+
+  .searchTerm:focus {
+    color: $primary-color;
+  }
+
+  .searchButton {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $primary-color;
+    background: $primary-color;
+    text-align: center;
+    color: $text-white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: $main-heading-size;
+  }
+}

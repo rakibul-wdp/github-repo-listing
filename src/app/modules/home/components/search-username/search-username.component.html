@@ -1,0 +1,19 @@
+<div class="search-username">
+  <div class="search-username-wrapper">
+    <div class="search mat-elevation-z8">
+      <input
+        type="text"
+        class="searchTerm"
+        placeholder="Search user by github username"
+        [(ngModel)]="searchedUserName"
+      />
+      <button
+        type="submit"
+        class="searchButton flex-center"
+        (click)="checkIfUserExists()"
+      >
+        <i class="material-icons">search</i>
+      </button>
+    </div>
+  </div>
+</div>
